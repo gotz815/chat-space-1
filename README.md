@@ -23,13 +23,48 @@ Things you may want to cover:
 
 * ...
 
+##messageテーブル
+|column|Type|Option|
+|------|----|------|
+|body  |text|null: false|
+|image |string|
+|group_id|integer|null: false, foreign_key: true,(データ検索)|
+|user_id|integer|null: false, foreign_key: true,(データ検索)|
+
+##association
+-belongs_to :user
+-belongs_to :group
+
+
 ## menbersテーブル
 |column|Type|Option|
 |------|----|------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### ssociation
+### association
 -belongs_to :group
--belongs_to: user
+-belongs_to :user
+-has_many :messages
+
+##groupテーブル
+|column|Type|Option|
+|------|----|------|
+|name  |string|null: false, foreign_key: true, (データ検索)|
+|user_id|integer|null: false, foreign_key: true|
+
+### association
+-belongs_to :user
+
+
+## usersテーブル
+|column|Type|Option|
+|------|----|------|
+|name  |string|null: false, foreign_key: true, unique :true,(データ検索)|
+|email |string|null: false|
+
+### association
+-has_many :messages
+-belongs_to :group
+-belongs_to :menber
 
