@@ -26,10 +26,10 @@ Things you may want to cover:
 ##messageテーブル
 |column|Type|Option|
 |------|----|------|
-|body  |text|null: false|
+|body  |text|
 |image |string|
-|group_id|integer|null: false, foreign_key: true,(データ検索)|
-|user_id|integer|null: false, foreign_key: true,(データ検索)|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true,index(データ検索)|
 
 ##association
 -belongs_to :user
@@ -42,29 +42,37 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### association
--belongs_to :group
--belongs_to :user
--has_many :messages
+
 
 ##groupテーブル
 |column|Type|Option|
 |------|----|------|
-|name  |string|null: false, foreign_key: true, (データ検索)|
-|user_id|integer|null: false, foreign_key: true|
+|name  |string|null: false, unique: true,index(データ検索)|
 
 ### association
--belongs_to :user
+-has_many :users, through: :group_users
+-has_many :messages
 
 
 ## usersテーブル
 |column|Type|Option|
 |------|----|------|
-|name  |string|null: false, foreign_key: true, unique :true,(データ検索)|
+|name  |string|null: false, foreign_key: true, unique :true,index(データ検索)|
 |email |string|null: false|
 
 ### association
 -has_many :messages
+-has_many :groups, through: :group_users
+
+## gruop_userテーブル
+|column|Type|Option|
+|------|----|------|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+
+###association
+-belongs_to :user
 -belongs_to :group
--belongs_to :menber
+
+
 
