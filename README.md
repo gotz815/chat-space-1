@@ -50,7 +50,7 @@ Things you may want to cover:
 |column|Type|Option|
 |------|----|------|
 |name  |string|null: false, unique :true, add_index|
-|email |string|null: false|
+|email |string|null: false, unique :true|
 
 ### association
 -has_many :messages
