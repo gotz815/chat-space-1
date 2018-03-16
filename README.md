@@ -49,12 +49,13 @@ Things you may want to cover:
 ## usersテーブル
 |column|Type|Option|
 |------|----|------|
-|name  |string|null: false, foreign_key: true, unique :true, add_index|
+|name  |string|null: false, unique :true, add_index|
 |email |string|null: false|
 
 ### association
 -has_many :messages
 -has_many :groups, through: :group_users
+-has_many :group_users
 
 ## gruop_usersテーブル
 |column|Type|Option|
