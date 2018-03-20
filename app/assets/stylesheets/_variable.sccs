@@ -1,0 +1,11 @@
+background-color
+$notice: #38AEF0;
+$side-top: #253141;
+$side-bottom :#2f3e51;
+#chat: #AAAAAA;
+
+font-color
+$white: #FFFFFF
+$menber-color: #999999
+$message-color: #434A54
+$border: #eeeeee
