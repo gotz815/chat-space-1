@@ -3,34 +3,33 @@
   .sidebar
     .sidebar__top
       %h1 SampleUser
-      %ul.user-name-lists
+      %ul.lists
         %li.list
           =link_to do
             %i.fa.fa-pencil-square-o
         %li.list
           =link_to do
             %i.fa.fa-cog　
-    .sidebar__btotom
-      %ul.groups-info
-        %li.groups-content
+    .sidebar__bottom
+      %ul.sidebar__bottom__groups-info
+        %li.sidebar__bottom__groups-content
           <%= render partical: "group", collection: @groups %>
   .chatbar
     .chatbar__top
-      .top-left
-        .chatbar-top__name
+      .chatbar__top__left
+        .chatbar__top__left__name
           SampleGroup
-        .chatbar-top__member
+        .chatbar__top__left__member
           Member:SampleUser
-      .top-right
+      .chatbar__top__right
         %button 
           Edit
     .chatbar__main
-      %ul.messages
-        %ul.messages
-          %li.message
-            <%= render partical: "message", collection: "@messages" %>
+      %ul.chatbar__main__messages
+        %li.chatbar__main__message
+          <%= render partical: "message", collection: "@messages" %>
     .chatbar__bottom
-      %input{type: "text", placeholder: "type a message", class: "chatbar-bottom__textfield"}
+      %input{type: "text", placeholder: "type a message", class: "chatbar__bottom__textfield"}
         
         %i.fa.fa-picture-o
-        %input{type: "submit", value: "send", class: "chatbar-bottom__send"}
+        %input{type: "submit", value: "send", class: "chatbar__bottom__send"}

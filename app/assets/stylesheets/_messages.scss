@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .notice {
-	background-color: #38AEF0;
+	background-color: $notice;
 	text-align: center;
 	color: white;
 }
@@ -16,48 +16,52 @@
 .sidebar {
 	width: 300px;
 	height: 100%;
-	background-color: #2f3e51;
+	background-color: $side-bottom;
 	color: white;
 	float: left;
 	position: fixed;
+
 	&__top {
 		height: 100px;
-		background-color: #253141;
+		background-color: $side-top;
 		padding: 0 20px; 
 		line-height: 100px;
-		h1 {
+		 h1 {
 			font-size: 16px;
 			color: white;
 			font-weight: bold;
 			width: 100px;
 			float: left;
 		}
-		.user-name-lists {
+		.list {
 			padding-top: 40px;
 		}
-		i {
+		.fa {
 			display: inline-block;
 			color: white;
 			float: right;
 			line-height: 100px;
 		}
 	}
+
 	&__bottom {
-		height: calc(100% - 150px);
+		height: calc(100% - 100px);
 		padding: 0 20px;
 		overflow: auto;
 		background-color: #2f3e51;
-		.groups-content {
+
+		.groups__content {
 			padding: 0 20px;
-			.group-name {
+
+			&__name {
 				font-size: 15px;
 				color: white;
 				padding: 20px 0 5px 0;
 			}
-			.group_body {
+			&__body {
 				font-size: 11px;
 				color: white;
-				padding-bottom: 40px;
+				paddingadding-bottom: 40px;
 			}
 		}
 	}
@@ -68,35 +72,36 @@
 	height: 100%;
 	float: right;
 	background-color: white; 
+
 	&__top {
 		width: calc(100vw - 300px);
 		height: 100px;
 		background-color :white;
 		padding: 0 20px;
-		.top-left {
+		.chatbar__top__left {
 			width: 70%;
-			.chatbar-top__name {
+			&__name {
 				font-size: 20px;
-				color: #333333;
+				color: $name-color;
 				padding-top: 20px;
 				padding-bottom: 5px; 
 			}
-			.chatbar-top__member {
+			&__member {
 				font-size: 12px;
 				text-align: center;
-				color: #999999;
+				color: $menber-color;
 				float: left;
 			}
 		}
-		.top-right {
+		.chatbar__top__right {
 			width: 30%;
 			float: right;
 			line-height: 100px;
 			position: relative;
 			bottom: 30px;
 			button {
-				color: #38AEF0;
-				border-color: #38AEF0;
+				color: $notice;
+				border-color: $notice;
 				height: 40px;
 				width: 70px;
 				float: right;
@@ -105,58 +110,60 @@
 		}
 	}
 	&__main {
-		background-color: #F5F5F5;
+		background-color: $main-color;
 		padding: 0 40px;
-		height: calc(100% - 100px 80px);
+		height: calc(100% - 100px - 80px);
 		overflow: auto;
 		display: flex;
 		width: calc(100vw - 300px);
-		.message {
+		.chatbar__main__message {
 			padding: 46px 0 40px 0;
-			.message-name {
-				color: #434A54;
+
+			&__name {
+				color: $message-color;
 				font-size: 16px;
 				font-weight: bold;
 				line-height: 10px;
 				float: left;
 			}
-			.message-time {
+			&__time {
 				font-size: 12px;
 				padding-left: 10px;
-				color: #999999;
+				color: $menber-color;
 				float: left;
 				line-height: 10px;
 			}
-			.message-body {
+			&__body {
 				padding-top: 10px;
 				font-size: 14px;
-				color: #434A54;
+				color: $message-color;
 				clear: both;
 			}
 		}
 	}
 	&__bottom {
 		position: absolute; bottom: 0px;
-		background-color: #AAAAAA;
-		width: calc(100vw - 300px); 
-		height: 80px;
-		padding: 0 20px;
-		.chatbar-bottom-textfield {
+		background-color: $chat;	
+	    width: calc(100vw - 300px); 
+	    height: 80px;
+	    padding: 0 20px;
+		&__textfield {
 			resize: none;
 			width: 900px;
 			font-size: 16px;
-			color: #434A54;
+			color: $message-color;
 			height: 50px;
 			margin: 10px 0;
 			position: absolute;
 		}
 		.fa-picture-o {
-			position: relative;
-			right: 250px;
-			top: 30px;
-			color: #333333;
+		  position: relative;
+		  right: 250px;
+		  top: 30px;
+		  color: $name-color;
+		  float: right;
 		}
-		.chatbar-bottom__send {
+		&__send {
 			background-color: #38AEF0;
 			color: white;
 			height: 40px;
