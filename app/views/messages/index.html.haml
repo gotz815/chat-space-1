@@ -1,7 +1,7 @@
 .notice グループが作成されました
 .contents
   .sidebar
-    .sidebar-top
+    .sidebar__top
       %h1 SampleUser
       %ul.user-name-lists
         %li.list
@@ -10,19 +10,12 @@
         %li.list
           =link_to do
             %i.fa.fa-cog　
-    .sidebar-btotom__groups-info
+    .sidebar__btotom
       %ul.groups-info
         %li.groups-content
-          <% @group.each do |group| %>
-          <%= render partical: "group", :collections => @groups %>
-        %li.group-content
-          <% @group.each do |group| %>
-          <%= render partical: "group", :collections => @groups %>
-        %li.group-content
-          <% @group.each do |group| %>
-          <%= render partical: "group", :collections => @groups %>
+          <%= render partical: "group", collection: @groups %>
   .chatbar
-    .chatbar-top
+    .chatbar__top
       .top-left
         .chatbar-top__name
           SampleGroup
@@ -31,25 +24,12 @@
       .top-right
         %button 
           Edit
-    .chatbar-main
+    .chatbar__main
       %ul.messages
         %ul.messages
           %li.message
-            <% @message.each do |message| %>
-            <%= render partical: "message", :collections "@messages" %>
-          %li.message
-            <% @message.each do |message| %>
-            <%= render partical: "message", :collections "@messages" %> 
-          %li.message
-            <% @message.each do |message| %>
-            <%= render partical: "message", :collections "@messages" %>
-          %li.message
-            <% @message.each do |message| %>
-            <%= render partical: "message", :collections "@messages" %>
-          %li.message
-            <% @message.each do |message| %>
-            <%= render partical: "message", :collections "@messages" %>
-    .chatbar-bottom
+            <%= render partical: "message", collection: "@messages" %>
+    .chatbar__bottom
       %input{type: "text", placeholder: "type a message", class: "chatbar-bottom__textfield"}
         
         %i.fa.fa-picture-o
