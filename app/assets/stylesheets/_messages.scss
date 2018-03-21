@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.updatebar {
+.notice {
 	background-color: #38AEF0;
 	text-align: center;
 	color: #FFFFFF;
@@ -23,7 +23,7 @@
 }
 .sidebar-top {
 	height: 100px;
-	background-color:#253141;
+	background-color: #253141;
 	padding: 0 20px; 
 	line-height: 100px;
 }
@@ -54,12 +54,12 @@
 }
 .group-name {
 	font-size: 15px;
-	color:#FFFFFF;
+	color: #FFFFFF;
 	padding: 20px 0 5px 0;
 }
 .group_body {
 	font-size: 11px;
-	color:#FFFFFF;
+	color: #FFFFFF;
 	padding-bottom: 40px;
 }
 .chatbar {
@@ -83,7 +83,7 @@
 .chatbar-top__member {
 	font-size: 12px;
 	text-align: center;
-	color:#999999;
+	color: #999999;
 	float: left;
 }
 .top-left {

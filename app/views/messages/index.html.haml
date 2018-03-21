@@ -1,4 +1,4 @@
-.updatebar グループが作成されました
+.notice グループが作成されました
 .contents
   .sidebar
     .sidebar-top
@@ -13,20 +13,14 @@
     .sidebar-btotom__groups-info
       %ul.groups-info
         %li.groups-content
-          .group-name
-            SampleGroup
-          .group_body
-            まだメッセージはありません
+          <% @group.each do |group| %>
+          <%= render partical: "group", :collections => @groups %>
         %li.group-content
-          .group_name
-            SampleGroup
-          .group_body
-            まだメッセージはありません
+          <% @group.each do |group| %>
+          <%= render partical: "group", :collections => @groups %>
         %li.group-content
-          .group_name
-            SampleGroup
-          .group_body
-            まだメッセージはありません
+          <% @group.each do |group| %>
+          <%= render partical: "group", :collections => @groups %>
   .chatbar
     .chatbar-top
       .top-left
@@ -39,50 +33,24 @@
           Edit
     .chatbar-main
       %ul.messages
-        %li.message
-          %p.message-name 
-            SampleUser
-          %p.message-time
-            2017/08/25 15:23:67
-          %br
-          %p.message-body
-            こんにちは
-        %li.message
-          %p.message-name
-            SmpleUser
-          %p.message-time
-            2017/08/25 14:23:45
-          %br
-          %p.message-body
-            疲れた
-        %li.message
-          %p.message-name
-            SmpleUser
-          %p.message-time
-            2017/08/25 12:23:23
-          %br
-          %p.message-body
-            お昼休憩
-        %li.message
-          %p.message-name
-            SampleUser
-          %p.message-time
-            2017/08/24 23:45:78
-          %br
-          %p.message-body
-            おやすみ
-        %li.message
-          %p.message-name
-            SampleUser
-          %p.message-time
-            2017/08/24 23:30:78
-          %br
-          %p.message-body
-            おやすみ
+        %ul.messages
+          %li.message
+            <% @message.each do |message| %>
+            <%= render partical: "message", :collections "@messages" %>
+          %li.message
+            <% @message.each do |message| %>
+            <%= render partical: "message", :collections "@messages" %> 
+          %li.message
+            <% @message.each do |message| %>
+            <%= render partical: "message", :collections "@messages" %>
+          %li.message
+            <% @message.each do |message| %>
+            <%= render partical: "message", :collections "@messages" %>
+          %li.message
+            <% @message.each do |message| %>
+            <%= render partical: "message", :collections "@messages" %>
     .chatbar-bottom
       %input{type: "text", placeholder: "type a message", class: "chatbar-bottom__textfield"}
         
         %i.fa.fa-picture-o
         %input{type: "submit", value: "send", class: "chatbar-bottom__send"}
-
-

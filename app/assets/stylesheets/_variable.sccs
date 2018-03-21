@@ -2,7 +2,7 @@ background-color
 $notice: #38AEF0;
 $side-top: #253141;
 $side-bottom :#2f3e51;
-#chat: #AAAAAA;
+$chat: #AAAAAA;
 
 font-color
 $white: #FFFFFF
