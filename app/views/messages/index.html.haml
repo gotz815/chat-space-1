@@ -1,0 +1,35 @@
+.notice グループが作成されました
+.contents
+  .sidebar
+    .sidebar__top
+      %h1 SampleUser
+      %ul.lists
+        %li.list
+          =link_to do
+            %i.fa.fa-pencil-square-o
+        %li.list
+          =link_to do
+            %i.fa.fa-cog　
+    .sidebar__bottom
+      %ul.sidebar__bottom__groups-info
+        %li.sidebar__bottom__groups-content
+          <%= render partical: "group", collection: @groups %>
+  .chatbar
+    .chatbar__top
+      .chatbar__top__left
+        .chatbar__top__left__name
+          SampleGroup
+        .chatbar__top__left__member
+          Member:SampleUser
+      .chatbar__top__right
+        %button 
+          Edit
+    .chatbar__main
+      %ul.chatbar__main__messages
+        %li.chatbar__main__message
+          <%= render partical: "message", collection: "@messages" %>
+    .chatbar__bottom
+      %input{type: "text", placeholder: "type a message", class: "chatbar__bottom__textfield"}
+        
+        %i.fa.fa-picture-o
+        %input{type: "submit", value: "send", class: "chatbar__bottom__send"}
