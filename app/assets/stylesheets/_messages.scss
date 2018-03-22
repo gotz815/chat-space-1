@@ -20,7 +20,6 @@
 	color: white;
 	float: left;
 	position: fixed;
-
 	&__top {
 		height: 100px;
 		background-color: $side-top;
@@ -43,7 +42,6 @@
 			line-height: 100px;
 		}
 	}
-
 	&__bottom {
 		height: calc(100% - 100px);
 		padding: 0 20px;
@@ -61,12 +59,11 @@
 			&__body {
 				font-size: 11px;
 				color: white;
-				paddingadding-bottom: 40px;
+				padding-bottom: 40px;
 			}
 		}
 	}
 }
-
 .chatbar {
 	width: calc(100vw - 300px);
 	height: 100%;
@@ -144,9 +141,9 @@
 	&__bottom {
 		position: absolute; bottom: 0px;
 		background-color: $chat;	
-	    width: calc(100vw - 300px); 
-	    height: 80px;
-	    padding: 0 20px;
+		width: calc(100vw - 300px); 
+		height: 80px;
+		padding: 0 20px;
 		&__textfield {
 			resize: none;
 			width: 900px;
