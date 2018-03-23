@@ -14,7 +14,7 @@
     .sidebar__bottom
       %ul.sidebar__bottom__groups-info
         %li.sidebar__bottom__groups-content
-          <%= render partical: "group", collection: @groups %>
+          = render @groups
   .chatbar
     .chatbar__top
       .chatbar__top__left
@@ -28,7 +28,7 @@
     .chatbar__main
       %ul.chatbar__main__messages
         %li.chatbar__main__message
-          <%= render partical: "message", collection: "@messages" %>
+          = render @messages
     .chatbar__bottom
       %input{type: "text", placeholder: "type a message", class: "chatbar__bottom__textfield"}
         

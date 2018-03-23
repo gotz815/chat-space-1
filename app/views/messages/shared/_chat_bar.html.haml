@@ -1,0 +1,49 @@
+ .chatbar
+    .chatbar__top
+      .chatbar__top__left
+        .chatbar__top__left__name
+          SampleGroup
+        .chatbar__top__left__member
+          Member:SampleUser
+      .chatbar__top__right
+        %button_tag 
+          Edit
+    .chatbar__main
+      %ul.chatbar__main__messages
+        %li.chatbar__main__message
+        %p.message__name 
+          SampleUser
+        %p.message__time
+          2017/08/25 15:23:67
+        %br
+        %p.message__body
+          メッセージ
+      %li.chatbar__main__message
+        %p.message__name
+          SmpleUser
+        %p.message__time
+          2017/08/25 14:23:45
+        %br
+        %p.message__body
+          メッセージ
+      %li.chatbar__main__message
+        %p.message__name
+          SmpleUsers
+        %p.message__time
+          2017/08/25 12:23:23
+        %br
+        %p.message__body
+          メッセージ
+      %li.chatbar__main__message
+        %p.message__name
+          SampleUserd
+        %p.message__time
+          2017/08/24 23:45:78
+        %br
+        %p.message__body
+          メッセージ
+    .chatbar__bottom
+      %input{type: "text", placeholder: "type a message", class: "chatbar__bottom__textfield"}
+        
+        %i.fa.fa-picture-o
+        %input{type: "submit", value: "send", class: "chatbar__bottom__send"}
