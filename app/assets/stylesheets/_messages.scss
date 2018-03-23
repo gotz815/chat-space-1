@@ -47,21 +47,16 @@
 		padding: 0 20px;
 		overflow: auto;
 		background-color: #2f3e51;
-
-		.groups__content {
-			padding: 0 20px;
-
-			&__name {
+			.groups-content__name {
 				font-size: 15px;
 				color: white;
 				padding: 20px 0 5px 0;
 			}
-			&__body {
+			.groups-content__body {
 				font-size: 11px;
 				color: white;
 				padding-bottom: 40px;
 			}
-		}
 	}
 }
 .chatbar {
