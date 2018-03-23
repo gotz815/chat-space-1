@@ -32,15 +32,15 @@
 		overflow: auto;
 		background-color: #2f3e51;
 
-		.groups__content {
+		.sidebar__bottom__groups-content {
 			padding: 0 20px;
 
-			&__name {
+			.group__name {
 				font-size: 15px;
 				color: $white;
 				padding: 20px 0 5px 0;
 			}
-			&__body {
+			.group__body {
 				font-size: 11px;
 				color: $white;
 				padding-bottom: 40px;

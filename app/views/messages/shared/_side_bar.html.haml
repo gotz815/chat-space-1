@@ -9,12 +9,3 @@
       %li.list
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog', class: 'icon'
-  .sidebar__bottom
-    - current_user.groups.each do |group|
-      %ul.sidebar__bottom__groups-info
-        %li.sidebar__bottom__groups-content
-          =link_to group_messages_path(group) do
-            %p.group__name
-              = group.name
-            %p.group__body
-              まだメッセージはありません
