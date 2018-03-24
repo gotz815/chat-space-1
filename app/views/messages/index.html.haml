@@ -25,9 +25,7 @@
         %button 
           Edit
     .chatbar__main
-      %ul.chatbar__main__messages
-        %li.chatbar__main__message
-          = render "messages/message"
+      = render "messages/message"
     .chatbar__bottom
       %input{type: "text", placeholder: "type a message", class: "chatbar__bottom__textfield"}
         
