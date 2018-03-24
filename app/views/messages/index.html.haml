@@ -13,9 +13,7 @@
             = fa_icon 'cog', class: 'icon'
             %br
     .sidebar__bottom
-      %ul.sidebar__bottom__groups-info
-        %li.sidebar__bottom__groups-content
-          = render "groups/group"
+      = render "groups/group"
   .chatbar
     .chatbar__top
       .chatbar__top__left
@@ -27,9 +25,7 @@
         %button 
           Edit
     .chatbar__main
-      %ul.chatbar__main__messages
-        %li.chatbar__main__message
-          = render "messages/message"
+      = render "messages/message"
     .chatbar__bottom
       %input{type: "text", placeholder: "type a message", class: "chatbar__bottom__textfield"}
         
