@@ -26,8 +26,11 @@
           Edit
     .chatbar__main
       = render "messages/message"
-    .chatbar__bottom
-      %input{type: "text", placeholder: "type a message", class: "chatbar__bottom__textfield"}
-        
-        %i.fa.fa-picture-o
-        %input{type: "submit", value: "send", class: "chatbar__bottom__send"}
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

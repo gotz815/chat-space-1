@@ -32,11 +32,12 @@
 			width: 100px;
 			float: left;
 		}
-		.list {
+		.lists {
 			padding-top: 40px;
-		}
-		.icon {
 			display: inline-block;
+			}
+		.icon {
+			// display: inline-block;
 			color: $white;
 			float: right;
 		}
@@ -147,37 +148,42 @@
 			}
 		}
 	}
-	&__bottom {
+	.form {
 		position: absolute; bottom: 0px;
 		background-color: $chat;	
 		width: calc(100vw - 300px); 
 		height: 80px;
 		padding: 0 20px;
-		&__textfield {
-			resize: none;
-			width: 900px;
-			font-size: 16px;
-			color: $message-color;
-			height: 50px;
-			margin: 10px 0;
-			position: absolute;
-		}
-		.fa-picture-o {
-		  position: relative;
-		  right: 250px;
-		  top: 30px;
-		  color: $name-color;
-		  float: right;
-		}
-		&__send {
-			background-color: #38AEF0;
-			color: $white;
-			height: 40px;
-			width: 70px;
-			float: right;
-			margin: 15px 70px 15px 0;
-		}
-	}
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $notice;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
 }
 
 li {
