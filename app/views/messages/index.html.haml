@@ -24,8 +24,8 @@
       .chatbar__top__right
         %button 
           Edit
-    .chatbar__main
-      = render "messages/message"
+    .message
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'

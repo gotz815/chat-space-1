@@ -20,7 +20,7 @@
 			&__member {
 				font-size: 12px;
 				text-align: center;
-				color: $menber-color;
+				color: $member-color;
 				float: left;
 			}
 		}
@@ -40,6 +40,36 @@
 			}
 		}
 	}
+		.messages {
+    background-color: $main-color;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
+    height: calc(100% - 100px - 90px);
+    .message {
+      .upper-message {
+        display: flex;
+        &__name {
+          color: $message-color;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__time{
+          color: $member-color;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: $message-color;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
 	.form {
 		position: absolute; bottom: 0px;
 		background-color: $chat;	

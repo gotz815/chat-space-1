@@ -1,33 +1,10 @@
-%ul.chatbar__main__messages
-  %li.chatbar__main__message
-    %p.chatbar__main__message__name 
-      SampleUser
-    %p.chatbar__main__message__time
-      2017/08/25 15:23:67
-    %br
-    %p.chatbar__main__message__body
-      メッセージ
-  %li.chatbar__main__message
-    %p.chatbar__main__message__name
-      SmpleUser
-    %p.chatbar__main__message__time
-      2017/08/25 14:23:45
-    %br
-    %p.chatbar__main__message__body
-      メッセージ
-  %li.chatbar__main__message
-    %p.chatbar__main__message__name
-      SmpleUsers
-    %p.chatbar__main__message__time
-      2017/08/25 12:23:23
-    %br
-    %p.chatbar__main__message__body
-      メッセージ
-  %li.chatbar__main__message
-    %p.chatbar__main__message__name
-      SampleUserd
-    %p.chatbar__main__message__time
-      2017/08/24 23:45:78
-    %br
-    %p.chatbar__main__message__body
-      メッセージ
+.message
+  .upper-message
+    .upper-message__name 
+      = message.user.name
+    .upper-message__time
+      = format_posted_time(message.created_at)
+  .lower-message
+    - if message.content.present?
+      %p.lower-message__content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

@@ -96,7 +96,7 @@
 			&__member {
 				font-size: 12px;
 				text-align: center;
-				color: $menber-color;
+				color: $member-color;
 				float: left;
 			}
 		}
@@ -116,38 +116,67 @@
 			}
 		}
 	}
-	&__main {
-		background-color: $main-color;
-		padding: 0 40px;
-		height: calc(100% - 100px - 80px);
-		overflow: auto;
-		display: flex;
-		width: calc(100vw - 300px);
-		.chatbar__main__message {
-			padding: 46px 0 40px 0;
+	.messages {
+    background-color: $main-color;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
+    height: calc(100% - 100px - 90px);
+    .message {
+      .upper-message {
+        display: flex;
+        &__name {
+          color: $message-color;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__time{
+          color: $member-color;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: $message-color;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+	// &__main {
+	// 	background-color: $main-color;
+	// 	padding: 0 40px;
+	// 	height: calc(100% - 100px - 80px);
+	// 	overflow: auto;
+	// 	display: flex;
+	// 	width: calc(100vw - 300px);
+	// 	.chatbar__main__message {
+	// 		padding: 46px 0 40px 0;
 
-			&__name {
-				color: $message-color;
-				font-size: 16px;
-				font-weight: bold;
-				line-height: 10px;
-				float: left;
-			}
-			&__time {
-				font-size: 12px;
-				padding-left: 10px;
-				color: $menber-color;
-				float: left;
-				line-height: 10px;
-			}
-			&__body {
-				padding-top: 10px;
-				font-size: 14px;
-				color: $message-color;
-				clear: both;
-			}
-		}
-	}
+	// 		&__name {
+	// 			color: $message-color;
+	// 			font-size: 16px;
+	// 			font-weight: bold;
+	// 			line-height: 10px;
+	// 			float: left;
+	// 		}
+	// 		&__time {
+	// 			font-size: 12px;
+	// 			padding-left: 10px;
+	// 			color: $menber-color;
+	// 			float: left;
+	// 			line-height: 10px;
+	// 		}
+	// 		&__body {
+	// 			padding-top: 10px;
+	// 			font-size: 14px;
+	// 			color: $message-color;
+	// 			clear: both;
+	// 		}
+	// 	}
+	// }
 	.form {
 		position: absolute; bottom: 0px;
 		background-color: $chat;	
