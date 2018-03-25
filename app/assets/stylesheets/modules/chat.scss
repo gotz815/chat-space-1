@@ -13,14 +13,14 @@
 			width: 70%;
 			&__name {
 				font-size: 20px;
-				color: $name-color;
+				color: $black;
 				padding-top: 20px;
 				padding-bottom: 5px; 
 			}
 			&__member {
 				font-size: 12px;
 				text-align: center;
-				color: $menber-color;
+				color: $right-gray;
 				float: left;
 			}
 		}
@@ -30,9 +30,9 @@
 			line-height: 100px;
 			position: relative;
 			bottom: 30px;
-			.button_tag {
-				color: $notice;
-				border-color: $notice;
+			button {
+				color: $blue;
+				border-color: $blue;
 				height: 40px;
 				width: 70px;
 				float: right;
@@ -40,69 +40,76 @@
 			}
 		}
 	}
-	&__main {
-		background-color: $main-color;
-		padding: 0 40px;
+	.messages {
+    background-color: $main;
 		height: calc(100% - 100px - 80px);
-		overflow: auto;
-		display: flex;
 		width: calc(100vw - 300px);
-		.chatbar__main__message {
-			padding: 46px 0 40px 0;
-
-			&__name {
-				color: $message-color;
-				font-size: 16px;
-				font-weight: bold;
-				line-height: 10px;
-				float: left;
-			}
-			&__time {
-				font-size: 12px;
-				padding-left: 10px;
-				color: $menber-color;
-				float: left;
-				line-height: 10px;
-			}
-			&__body {
-				padding-top: 10px;
-				font-size: 14px;
-				color: $message-color;
-				clear: both;
-			}
-		}
+		padding-top: 46px;
+		.message {
+			margin-bottom: 40px;
+			padding: 0 20px;
+	    .upper-message {
+	      background-color: $main;
+	      display: flex;
+	      &__name {
+	        color: $black;
+	        font-size: 16px;
+	        font-weight: bold;
+	        line-height: 10px;
+	      }
+	      &__time{
+	        color: $right-gray;
+	        font-size: 12px;
+	        padding-left: 10px;
+	        line-height: 10px;
+	      }
+	    }
+	    .lower-message {
+	      margin-top: 10px;
+	      background-color: $main;
+        color: $black;
+        font-size: 14px;
+      }
+	  }
 	}
-	&__bottom {
+
+	.form {
 		position: absolute; bottom: 0px;
 		background-color: $chat;	
 		width: calc(100vw - 300px); 
 		height: 80px;
-		padding: 0 20px;
-		&__textfield {
-			resize: none;
-			width: 900px;
-			font-size: 16px;
-			color: $message-color;
-			height: 50px;
-			margin: 10px 0;
-			position: absolute;
-		}
-		.fa-picture-o {
-		  position: relative;
-		  right: 250px;
-		  top: 30px;
-		  color: $name-color;
-		  float: right;
-		}
-		&__send {
-			background-color: #38AEF0;
-			color: $white;
-			height: 40px;
-			width: 70px;
-			float: right;
-			margin: 15px 70px 15px 0;
-		}
-	}
+		padding: 20px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 180px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      position: absolute;
+    }
+  }
 }
 
 li {

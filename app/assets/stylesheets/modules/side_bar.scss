@@ -1,13 +1,13 @@
 .sidebar {
 	width: 300px;
 	height: 100%;
-	background-color: $side-bottom;
+	background-color: $right-blue;
 	color: $white;
 	float: left;
 	position: fixed;
 	&__top {
 		height: 100px;
-		background-color: $side-top;
+		background-color: $deep-blue;
 		padding: 0 20px; 
 		line-height: 100px;
 		 h1 {
@@ -17,13 +17,13 @@
 			width: 100px;
 			float: left;
 		}
-		.list {
+		.lists {
 			padding-top: 40px;
-		}
-		.icon {
-			display: inline-block;
-			color: $white;
-			float: right;
+			padding-right: 20px;
+			.icon {
+				color: $white;
+				float: right;
+			}
 		}
 	}
 	&__bottom {
@@ -31,7 +31,6 @@
 		padding: 0 20px;
 		overflow: auto;
 		background-color: #2f3e51;
-
 		.sidebar__bottom__groups-content {
 			padding: 0 20px;
 
