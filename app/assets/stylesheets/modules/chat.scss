@@ -7,20 +7,20 @@
 	&__top {
 		width: calc(100vw - 300px);
 		height: 100px;
-		background-color :white;
+		background-color :$white;
 		padding: 0 20px;
 		.chatbar__top__left {
 			width: 70%;
 			&__name {
 				font-size: 20px;
-				color: $name-color;
+				color: $black;
 				padding-top: 20px;
 				padding-bottom: 5px; 
 			}
 			&__member {
 				font-size: 12px;
 				text-align: center;
-				color: $member-color;
+				color: $right-gray;
 				float: left;
 			}
 		}
@@ -30,9 +30,9 @@
 			line-height: 100px;
 			position: relative;
 			bottom: 30px;
-			.button_tag {
-				color: $notice;
-				border-color: $notice;
+			button {
+				color: $blue;
+				border-color: $blue;
 				height: 40px;
 				width: 70px;
 				float: right;
@@ -40,35 +40,35 @@
 			}
 		}
 	}
-		.messages {
-    background-color: $main-color;
-    box-sizing: border-box;
-    padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
-    .message {
-      .upper-message {
-        display: flex;
-        &__name {
-          color: $message-color;
-          font-size: 16px;
-          font-weight: bold;
-        }
-        &__time{
-          color: $member-color;
-          font-size: 12px;
-          padding-left: 10px;
-        }
+	.messages {
+    background-color: $main;
+		height: calc(100% - 100px - 80px);
+		width: calc(100vw - 300px);
+		.message {
+			margin-bottom: 40px;
+			padding: 0 20px;
+	    .upper-message {
+	      padding: 46px 0 40px 0;
+	      background-color: $main;
+	      &__name {
+	        color: $black;
+	        font-size: 16px;
+	        font-weight: bold;
+	      }
+	      &__time{
+	        color: $right-gray;
+	        font-size: 12px;
+	        padding-left: 10px;
+	      }
+	    }
+	    .lower-message {
+	      margin-top: 10px;
+	      background-color: $main;
+        color: $black;
+        font-size: 14px;
       }
-      .lower-message {
-        margin-top: 10px;
-        &__content {
-          color: $message-color;
-          font-size: 14px;
-          margin-bottom: 40px;
-        }
-      }
-    }
-  }
+	  }
+	}
 
 	.form {
 		position: absolute; bottom: 0px;
@@ -76,38 +76,37 @@
 		width: calc(100vw - 300px); 
 		height: 80px;
 		padding: 0 20px;
-	  &__message {
-	    border: none;
-	    float: left;
-	    height: 50px;
-	    width: calc(100% - 150px);
-	  }
-	  &__mask {
-	    background-color: $white;
-	    float: left;
-	    height: 50px;
-	    padding-right: 10px;
-	    &__image {
-	      font-size: 20px;
-	      line-height: 50px;
-	    }
-	    .hidden {
-	      display: none;
-	    }
-	  }
-	  &__submit {
-	    background-color: $notice;
-	    border: none;
-	    color: $white;
-	    float: right;
-	    font-size: 16px;
-	    height: 50px;
-	    margin-left: 15px;
-	    padding: 0 30px;
-	  }
-	}
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
 }
-
 
 li {
 	list-style: none;

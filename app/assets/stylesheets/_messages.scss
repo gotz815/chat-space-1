@@ -1,9 +1,8 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .notice {
-	background-color: $notice;
+	background-color: $blue;
 	text-align: center;
 	color: $white;
 }
@@ -16,13 +15,13 @@
 .sidebar {
 	width: 300px;
 	height: 100%;
-	background-color: $side-bottom;
+	background-color: $right-blue;
 	color: $white;
 	float: left;
 	position: fixed;
 	&__top {
 		height: 100px;
-		background-color: $side-top;
+		background-color: $deep-blue;
 		padding: 0 20px; 
 		line-height: 100px;
 		 h1 {
@@ -32,14 +31,13 @@
 			width: 100px;
 			float: left;
 		}
-		.list {
+		.lists {
 			padding-top: 40px;
-		}
-		.icon {
-			display: inline-block;
-			color: $white;
-			float: right;
-			line-height: 100px;
+			padding-right: 20px;
+			.icon {
+				color: $white;
+				float: right;
+			}
 		}
 	}
 	&__bottom {
@@ -47,16 +45,20 @@
 		padding: 0 20px;
 		overflow: auto;
 		background-color: #2f3e51;
-			.groups-content__name {
+		.sidebar__bottom__groups-content {
+			padding: 0 20px;
+
+			.group__name {
 				font-size: 15px;
 				color: $white;
 				padding: 20px 0 5px 0;
 			}
-			.groups-content__body {
+			.group__body {
 				font-size: 11px;
 				color: $white;
 				padding-bottom: 40px;
 			}
+		}
 	}
 }
 .chatbar {
@@ -74,14 +76,14 @@
 			width: 70%;
 			&__name {
 				font-size: 20px;
-				color: $name-color;
+				color: $black;
 				padding-top: 20px;
 				padding-bottom: 5px; 
 			}
 			&__member {
 				font-size: 12px;
 				text-align: center;
-				color: $member-color;
+				color: $right-gray;
 				float: left;
 			}
 		}
@@ -92,8 +94,8 @@
 			position: relative;
 			bottom: 30px;
 			button {
-				color: $notice;
-				border-color: $notice;
+				color: $blue;
+				border-color: $blue;
 				height: 40px;
 				width: 70px;
 				float: right;
@@ -101,69 +103,74 @@
 			}
 		}
 	}
-	&__main {
-		background-color: $main-color;
-		padding: 0 40px;
+	.messages {
+    background-color: $main;
 		height: calc(100% - 100px - 80px);
-		overflow: auto;
-		display: flex;
 		width: calc(100vw - 300px);
-		.chatbar__main__message {
-			padding: 46px 0 40px 0;
-
-			&__name {
-				color: $message-color;
-				font-size: 16px;
-				font-weight: bold;
-				line-height: 10px;
-				float: left;
-			}
-			&__time {
-				font-size: 12px;
-				padding-left: 10px;
-				color: $menber-color;
-				float: left;
-				line-height: 10px;
-			}
-			&__body {
-				padding-top: 10px;
-				font-size: 14px;
-				color: $message-color;
-				clear: both;
-			}
-		}
+		padding-top: 46px;
+		.message {
+			margin-bottom: 40px;
+			padding: 0 20px;
+	    .upper-message {
+	      background-color: $main;
+	      &__name {
+	        color: $black;
+	        font-size: 16px;
+	        font-weight: bold;
+	        line-height: 10px;
+	      }
+	      &__time{
+	        color: $right-gray;
+	        font-size: 12px;
+	        padding-left: 10px;
+	        line-height: 10px;
+	      }
+	    }
+	    .lower-message {
+	      margin-top: 10px;
+	      background-color: $main;
+        color: $black;
+        font-size: 14px;
+      }
+	  }
 	}
-	&__bottom {
+
+	.form {
 		position: absolute; bottom: 0px;
 		background-color: $chat;	
 		width: calc(100vw - 300px); 
 		height: 80px;
 		padding: 0 20px;
-		&__textfield {
-			resize: none;
-			width: 900px;
-			font-size: 16px;
-			color: $message-color;
-			height: 50px;
-			margin: 10px 0;
-			position: absolute;
-		}
-		.fa-picture-o {
-		  position: relative;
-		  right: 250px;
-		  top: 30px;
-		  color: $name-color;
-		  float: right;
-		}
-		&__send {
-			background-color: #38AEF0;
-			color: $white;
-			height: 40px;
-			width: 70px;
-			float: right;
-			margin: 15px 70px 15px 0;
-		}
-	}
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
 }
 
 li {
