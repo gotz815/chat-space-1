@@ -113,6 +113,7 @@
 			padding: 0 20px;
 	    .upper-message {
 	      background-color: $main;
+	      display: flex;
 	      &__name {
 	        color: $black;
 	        font-size: 16px;
@@ -140,12 +141,12 @@
 		background-color: $chat;	
 		width: calc(100vw - 300px); 
 		height: 80px;
-		padding: 0 20px;
+		padding: 20px;
     &__message {
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      width: calc(100% - 180px);
     }
     &__mask {
       background-color: $white;
@@ -169,6 +170,7 @@
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+      position: absolute;
     }
   }
 }

@@ -7,7 +7,7 @@
 	&__top {
 		width: calc(100vw - 300px);
 		height: 100px;
-		background-color :$white;
+		background-color :white;
 		padding: 0 20px;
 		.chatbar__top__left {
 			width: 70%;
@@ -44,21 +44,24 @@
     background-color: $main;
 		height: calc(100% - 100px - 80px);
 		width: calc(100vw - 300px);
+		padding-top: 46px;
 		.message {
 			margin-bottom: 40px;
 			padding: 0 20px;
 	    .upper-message {
-	      padding: 46px 0 40px 0;
 	      background-color: $main;
+	      display: flex;
 	      &__name {
 	        color: $black;
 	        font-size: 16px;
 	        font-weight: bold;
+	        line-height: 10px;
 	      }
 	      &__time{
 	        color: $right-gray;
 	        font-size: 12px;
 	        padding-left: 10px;
+	        line-height: 10px;
 	      }
 	    }
 	    .lower-message {
@@ -75,12 +78,12 @@
 		background-color: $chat;	
 		width: calc(100vw - 300px); 
 		height: 80px;
-		padding: 0 20px;
+		padding: 20px;
     &__message {
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      width: calc(100% - 180px);
     }
     &__mask {
       background-color: $white;
@@ -104,6 +107,7 @@
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+      position: absolute;
     }
   }
 }
