@@ -40,6 +40,5 @@ $(document).on('turbolinks:load', function() {
       $(".form__submit").attr("disabled",false);
     })
   });
-
 });
  
