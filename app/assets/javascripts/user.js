@@ -21,6 +21,7 @@ $(function(){
 // イベント発火、keyupメソッド
 			$('#user-search-field').on('keyup', function(e){
 				var input = $('#user-search-field').val();
+				if(input !==""){
 					$.ajax({
 						type: 'GET',
 						url: '/users',
@@ -44,6 +45,7 @@ $(function(){
 				.fail(function() {
 					alert('ユーザーの検索に失敗しました');
 				})
+			}
 		});
 // 追加ユーザーリスト作成
 		function addUser(user_id, user_name) {
