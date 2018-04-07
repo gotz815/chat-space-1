@@ -70,3 +70,4 @@ $(function(){
 			$(this).parent().remove();
 		});
 });
+
