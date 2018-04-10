@@ -34,7 +34,6 @@ $(function() {
     })
     .done(function(data){
       var html = buildHTML(data);
-      // console.log(data)
       $('.messages').append(html); 
       $('.form__message').val('');
       $('.hidden').val('');
