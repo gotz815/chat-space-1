@@ -1,8 +1,8 @@
 json.array! @new_messages do |message|
-	json.content  message.content
-	json.name     message.user.name
-	json.time     message.created_at.strftime('%Y/%m/%d %H:%M:%S')
-	json.image_url message.image.url
-	json.id       message.id
+  json.content  message.content
+  json.name     message.user.name
+  json.time     message.created_at.to_s
+  json.image_url message.image.url
+  json.id       message.id
 end
 
