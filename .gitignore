@@ -17,6 +17,4 @@ public/
 # Ignore Byebug command history file.
 .byebug_history
 
-
-
-user-materials/
+config/secrets.yml
